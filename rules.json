@@ -22,13 +22,13 @@
             "field": "received_date",
             "predicate": "less than",
             "value": 10,
-            "type": "days"
+            "type": "day"
         },
         {
             "field": "received_date",
             "predicate": "greater than",
             "value": 1,
-            "type": "months"
+            "type": "month"
         }
       ],
       "actions": [
@@ -61,7 +61,7 @@
           "field": "received_date",
           "predicate": "less than",
           "value": "2",
-          "type": "days"
+          "type": "day"
         }
       ],
       "actions": [
