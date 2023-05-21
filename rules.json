@@ -51,6 +51,17 @@
           "field": "sender",
           "predicate": "contains",
           "value": "amazon.in"
+        },
+        {
+          "field": "subject",
+          "predicate": "contains",
+          "value": "407-3265286-0419553"
+        },
+        {
+          "field": "received_date",
+          "predicate": "less than",
+          "value": "2",
+          "type": "days"
         }
       ],
       "actions": [
