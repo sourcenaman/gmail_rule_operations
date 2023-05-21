@@ -1,0 +1,64 @@
+{
+  "any": [
+    {
+      "name": "Rule1",
+      "conditions": [
+        {
+            "field": "sender",
+            "predicate": "equals",
+            "value": "nbp343@gmail.com"
+        },
+        {
+            "field": "sender",
+            "predicate": "contains",
+            "value": "amazon.in"
+        },
+        {
+            "field": "body",
+            "predicate": "does not contain",
+            "value": "amazon.in"
+        },
+        {
+            "field": "received_date",
+            "predicate": "less than",
+            "value": 10,
+            "type": "days"
+        },
+        {
+            "field": "received_date",
+            "predicate": "greater than",
+            "value": 1,
+            "type": "months"
+        }
+      ],
+      "actions": [
+        {
+            "action": "move",
+            "value": "Important"
+        },
+        {
+            "action": "mark as",
+            "value": "read"
+        }
+      ]
+    }
+  ],
+  "all": [
+    {
+      "name": "Rule2",
+      "conditions": [
+        {
+          "field": "sender",
+          "predicate": "contains",
+          "value": "amazon.in"
+        }
+      ],
+      "actions": [
+        {
+          "action": "mark as",
+          "value": "read"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+venv
+token.json
+test
+emails.db
+ids.json
+test.py
+__pycache__
+credentials.json
