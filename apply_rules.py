@@ -12,11 +12,13 @@ if __name__ == "__main__":
     #apply rules and perform action on all the eligible emails with condition "all"
     for rule in rules["all"]:
         ids = fetch.fetch_all(rule["conditions"])
-        ApplyRules(ids, rule["actions"])
+        if ids:
+            ApplyRules(ids, rule["actions"])
 
     #apply rules and perform action on all the eligible emails with condition "any"
     for rule in rules["any"]:
         ids = fetch.fetch_any(rule["conditions"])
-        ApplyRules(ids, rule["actions"])
+        if ids:
+            ApplyRules(ids, rule["actions"])
 
     print("Done")
