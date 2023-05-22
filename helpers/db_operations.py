@@ -16,7 +16,7 @@ class InsertEmails():
             if (mimeType in ["text/plain", "text/html"] and "data" in part["body"].keys()):
                 return part["body"]["data"]
             elif ("parts" in part.keys()):
-                return self.extract_body(part["parts"])
+                return self._extract_body(part["parts"])
         return False
     
     def _parse_headers(self, mail):
